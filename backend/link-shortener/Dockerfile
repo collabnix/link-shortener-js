@@ -1,10 +1,6 @@
 FROM node:16
 
-
-COPY package*.json /app/package.json
-COPY tsconfig.json /app/tsconfig.json
-COPY src /app/src
-COPY . /app
+COPY . .
 WORKDIR /app
 
 RUN ["npm","install","global","@nestjs/cli"]
